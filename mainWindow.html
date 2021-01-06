@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Calling App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mainWindow.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+
+            <h1>Sign Up</h1>
+        </div>
+    </div>
+    <h1>My name is anthony</h1>
+    <button class="btn-dark" id="signup">Sign Up</button>
+    <p id="demo">hello ji sanam hum aa gaye</p>
+</body>
+
+<script>
+    const button = document.getElementById("signup");
+    button.addEventListener('click', () => {
+        document.getElementById("demo").style.color = "rgb(255,0,255)";
+    })
+</script>
+
+</html>

@@ -41,43 +41,57 @@
             </div>
 
         </div>
-        <div class="row justify-content-center" id="otp-container">
-            <input type="number" id="otp" class="input-group-text w-50" required placeholder="Enter Code">
+        <div class=" row justify-content-center " id="otp-container">
+            <input type="number " id="otp" class="input-group-text w-50 " required placeholder="Enter Code ">
         </div>
+        <div class="row" id="error"></div>
+
 
         <div class="row " id="log1">
-            <button class="p-2 w-50 login" id="signup">Login</button>
+            <button class="p-2 w-50 login " id="signup ">Login</button>
         </div>
         <div class="row " id="log2">
-            <button class="p-2 w-50 login" id="signup2">Login</button>
+            <button class="p-2 w-50 login " id="signup2 ">Login</button>
         </div>
     </div>
 </body>
 
 <script>
-    const button = document.getElementById("signup");
+    const button = document.getElementById("signup ");
     button.addEventListener('click', () => {
         if (document.getElementById('email').value) {
+            document.getElementById("error").innerHTML = "";
+
             var email = document.getElementById("email").value;
 
             if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
                 console.log('true');
-                document.getElementById("note").innerHTML = "We've sent a temporary authorization code to " + email + ", it may take a few minutes to arrive.";
+                document.getElementById("note").innerHTML = "We 've sent a temporary authorization code to " + email + ", it may take a few minutes to arrive.";
                 document.getElementById("reminder").style.display = "inherit";
                 document.getElementById("otp-container").style.display = "flex";
                 document.getElementById("log2").style.display = "flex"
                 document.getElementById("log1").style.display = "none";
-
+                document.getElementById("error").innerHTML = "";
 
 
 
             } else {
-                console.log('false');
+                document.getElementById("error").innerHTML = "Invalid Email";
             }
         } else {
-            console.log('empty');
+            document.getElementById("error").innerHTML = "Kindly enter the email";
+
         }
 
+    })
+    const button2 = document.getElementById("signup2 ");
+    button2.addEventListener('click', () => {
+        if (isNaN(document.getElementById('otp').value)) {
+            document.getElementById("error").innerHTML = "Enter valid otp";
+        } else {
+            document.getElementById("error").innerHTML = "valid otp";
+
+        }
     })
 </script>
 

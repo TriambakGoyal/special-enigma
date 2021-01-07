@@ -9,12 +9,12 @@ let mainWindow;
 app.on('ready', function() {
     //Create new window
     mainWindow = new BrowserWindow({
-        width: 435,
-        height: 600,
+        width: 447,
+        height: 622,
         minHeight: 511,
         minWidth: 435,
         maximizable: false,
-        resizable: true,
+        resizable: false,
         webPreferences: {
             nodeIntegration: true
         }
@@ -23,7 +23,7 @@ app.on('ready', function() {
     mainWindow.setMenu(null);
     //Loading HTML file
     mainWindow.loadFile("mainWindow.html");
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
     try {
         require('electron-reloader')(module)
     } catch (_) {}

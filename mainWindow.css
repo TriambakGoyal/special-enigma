@@ -67,3 +67,7 @@ button {
 #email-container {
     margin-top: 10%;
 }
+
+#log2 {
+    display: none;
+}

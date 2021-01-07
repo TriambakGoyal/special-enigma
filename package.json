@@ -9,7 +9,10 @@
     "author": "Triambak Goyal",
     "license": "ISC",
     "dependencies": {
+        "jquery": "^3.5.1",
+        "bootstrap": "^4.5.3",
         "electron": "^11.1.1",
         "electron-reloader": "^1.1.0"
+
     }
 }

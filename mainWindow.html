@@ -44,7 +44,7 @@
         <div class=" row justify-content-center " id="otp-container">
             <input type="number " id="otp" class="input-group-text w-50 " required placeholder="Enter Code ">
         </div>
-        <div class="row" id="error"></div>
+        <div class="row" style="color: red;" id="error"></div>
 
 
         <div class="row " id="log1">
@@ -88,8 +88,14 @@
     button2.addEventListener('click', () => {
         if (isNaN(document.getElementById('otp').value)) {
             document.getElementById("error").innerHTML = "Enter valid otp";
+        } else if (document.getElementById('otp').value > 100000 && document.getElementById('otp').value < 9999999) {
+            const {
+                ipcRenderer
+            } = require('electron');
+            ipcRenderer.send('newWindow', 'profile.html');
+
         } else {
-            document.getElementById("error").innerHTML = "valid otp";
+            document.getElementById("error").innerHTML = "Kindly enter some 6 digit number (Testing purpose)";
 
         }
     })
